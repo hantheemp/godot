@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckqbjap0k6oqk"]
+
+[ext_resource type="Script" uid="uid://dt0sdbjhnr55n" path="res://FiniteStateMachine.gd" id="1_4l5f0"]
+[ext_resource type="Script" uid="uid://bm1lfwidykg3k" path="res://Idle.gd" id="2_ipcgc"]
+[ext_resource type="Script" uid="uid://dggylifj1otr6" path="res://Attack.gd" id="3_ipcgc"]
+[ext_resource type="Script" uid="uid://b0dtyemudfmbd" path="res://Move.gd" id="4_ipcgc"]
+
+[node name="FSM" type="Node" node_paths=PackedStringArray("initial_state")]
+script = ExtResource("1_4l5f0")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="."]
+script = ExtResource("2_ipcgc")
+metadata/_custom_type_script = "uid://6dth7erasm0f"
+
+[node name="Attack" type="Node" parent="."]
+script = ExtResource("3_ipcgc")
+metadata/_custom_type_script = "uid://6dth7erasm0f"
+
+[node name="Move" type="Node" parent="."]
+script = ExtResource("4_ipcgc")
+metadata/_custom_type_script = "uid://6dth7erasm0f"
